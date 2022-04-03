@@ -1,4 +1,3 @@
-瑞萌萌的软工课设  
 RMMall 商城项目  
 在线地址 ： http://happyrmmall.top  
 

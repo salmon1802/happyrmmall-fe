@@ -13,6 +13,7 @@ var _order = {
 	createOrderNum : function(productInfo,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/order/create.do'),
+			method  : 'post',
 			data	: productInfo,
 			success	: resolve,
 			error 	: reject
@@ -42,6 +43,7 @@ var _order = {
 	cancelOrder : function(orderNumber,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/order/cancel.do'),
+			method  : 'delete',
 			data	: {
 				orderNo : orderNumber
 			},
@@ -53,6 +55,7 @@ var _order = {
 	getPaymentInfo : function(orderNumber,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/order/pay.do'),
+			method  : 'post',
 			data	: {
 				orderNo : orderNumber
 			},

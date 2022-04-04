@@ -6,7 +6,6 @@ var _user = {
         _mm.request({
             url     : _mm.getServerUrl('/user/login.do'),
             data    : userInfo,
-            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -19,7 +18,6 @@ var _user = {
                 type    : 'username',
                 str     : username
             },
-            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -38,7 +36,6 @@ var _user = {
     checkLogin : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/user/get_user_info.do'),
-            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -50,7 +47,6 @@ var _user = {
             data    : {
                 username : username
             },
-            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -60,7 +56,6 @@ var _user = {
         _mm.request({
             url     : _mm.getServerUrl('/user/forget_check_answer.do'),
             data    : userInfo,
-            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -70,7 +65,7 @@ var _user = {
         _mm.request({
             url     : _mm.getServerUrl('/user/forget_reset_password.do'),
             data    : userInfo,
-            method  : 'POST',
+            method  : 'put',
             success : resolve,
             error   : reject
         });
@@ -79,7 +74,6 @@ var _user = {
     getUserInfo : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/user/get_information.do'),
-            method  : 'POST',
             success : resolve,
             error   : reject
         });
@@ -89,7 +83,7 @@ var _user = {
         _mm.request({
             url     : _mm.getServerUrl('/user/update_information.do'),
             data    : userInfo,
-            method  : 'POST',
+            method  : 'put',
             success : resolve,
             error   : reject
         });
@@ -99,7 +93,7 @@ var _user = {
         _mm.request({
             url     : _mm.getServerUrl('/user/reset_password.do'),
             data    : userInfo,
-            method  : 'POST',
+            method  : 'put',
             success : resolve,
             error   : reject
         });

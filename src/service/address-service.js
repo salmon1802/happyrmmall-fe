@@ -13,24 +13,27 @@ var _address = {
 	save : function(addressInfo,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/shipping/add.do'),
+			method  : 'post',
 			data    : addressInfo,
 			success	: resolve,
 			error 	: reject
 });
 	},
-	//新建收件人
+	//更新收件人
 	update : function(addressInfo,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/shipping/update.do'),
+			method  : 'put',
 			data    : addressInfo,
 			success	: resolve,
 			error 	: reject
 });
 	},
-	//新建收件人
+	//删除收件人
 	deleteAddress : function(id,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/shipping/del.do'),
+			method  : 'delete',
 			data    : {
 				shippingId : id
 			},

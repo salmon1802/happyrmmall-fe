@@ -13,6 +13,7 @@ var _cart = {
     addToCart : function(productInfo, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/add.do'),
+            method  : 'post',
             data    : productInfo,
             success : resolve,
             error   : reject
@@ -30,6 +31,7 @@ var _cart = {
     selectProduct : function(productId, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/select.do'),
+            method  : 'post',
             data    : {
                 productId : productId
             },
@@ -41,6 +43,7 @@ var _cart = {
     unselectProduct : function(productId, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/un_select.do'),
+            method  : 'post',
             data    : {
                 productId : productId
             },
@@ -52,6 +55,7 @@ var _cart = {
     selectAllProduct : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/select_all.do'),
+            method  : 'post',
             success : resolve,
             error   : reject
         });
@@ -60,6 +64,7 @@ var _cart = {
     unselectAllProduct : function(resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/un_select_all.do'),
+            method  : 'post',
             success : resolve,
             error   : reject
         });
@@ -68,6 +73,7 @@ var _cart = {
     updateProduct : function(productInfo, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/update.do'),
+            method  : 'put',
             data    : productInfo,
             success : resolve,
             error   : reject
@@ -77,6 +83,7 @@ var _cart = {
     deleteProduct : function(productIds, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/cart/delete_product.do'),
+            method  : 'delete',
             data    : {
                 productIds : productIds
             },

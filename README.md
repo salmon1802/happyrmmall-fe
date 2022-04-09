@@ -1,5 +1,5 @@
 RMMall 商城项目  
-在线地址 ： http://happyrmmall.top  
+在线地址 ： http://happyrmmall.cn  
 
 项目初始化步骤：  
 

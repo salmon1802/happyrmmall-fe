@@ -19,13 +19,14 @@ var page = {
 	},
 	//加载订单详情
 	loadPayment : function(){
-		var orderDetailHtml = "",
+		var paymentHtml = '',
 			_this = this,
 			$content = $('.page-wrap');
+		$content.html('<div class="loading"></div>');
 			_order.getPaymentInfo(this.data.orderNumber,function(res){
 				//渲染html
-				orderDetailHtml = _mm.renderHtml(templateIndex,res);
-				$content.html(orderDetailHtml);	
+				paymentHtml = _mm.renderHtml(templateIndex,res);
+				$content.html(paymentHtml);	
 				_this.listenOrderStatus();
 			},function(errMsg){
 				$content.html('<p class="err-tip>'+ errMsg +'</p>"')

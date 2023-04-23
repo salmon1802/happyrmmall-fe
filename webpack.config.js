@@ -41,7 +41,7 @@ var config = {
   },
   output:{
 		path :__dirname + '/dist/',
-		publicPath : 'dev' === WEBPACK_ENV ? '/dist/':'//s.happyrmmall.cn/happyrmmall-fe/dist/',
+		publicPath : 'dev' === WEBPACK_ENV ? '/dist/':'//s.wclmall.top/happyrmmall-fe/dist/',
     filename:'js/[name].js'
   }, 
   externals: {
